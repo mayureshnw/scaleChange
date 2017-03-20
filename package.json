@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/Mnw2212/scaleChange#readme",
   "dependencies": {
+    "babel-register": "^6.24.0",
+    "eslint-config-hapi": "^10.0.0",
+    "eslint-plugin-hapi": "^4.0.0",
     "hapi": "^16.1.0"
   }
 }

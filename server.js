@@ -1,7 +1,7 @@
 'use strict';
 require('babel-register');
-
 const Hapi = require('hapi');
+const Models = require('./models/index.js');
 
 const server = new Hapi.Server();
 server.connection({
@@ -13,12 +13,12 @@ server.route({
     method: 'GET',
     path: '/',
     handler: (request, reply) => {
+
         reply('Hello, world!');
     }
 });
 
 server.start((err) => {
-
     if (err) {
         throw err;
     }

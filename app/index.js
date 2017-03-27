@@ -1,5 +1,6 @@
-const Hapi = require('hapi');
-const Models = require('./models/index.js');
+import Hapi from 'hapi';
+// import Models from '../models/index';
+// const Models = require('./models/index.js');
 
 const server = new Hapi.Server();
 server.connection({
@@ -19,4 +20,5 @@ server.start((err) => {
   if (err) {
     throw err;
   }
+  console.log('server started on localhist 3000');
 });

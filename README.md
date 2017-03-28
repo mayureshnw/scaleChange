@@ -40,3 +40,15 @@ I am particularly interested in how javascript handles load and the respective a
 
 ## Folder structure
 Since the prediction is that folder structure will change considerably overtime, I will be adding it in the readme for every branch
+
+## Learnings
+- Pg loader is super fast in uploadting csv's to database.
+  - was able to upload 1 crore rows in ~18s without an index
+- Using babel cli in production
+  - dont use it in production
+  - use it in development the way we would normally use node
+  - build the whole project using babel-node and then use node v6/7 for running in production
+- DB Performances
+  - Ran a simple query `select * from appuser where first_name='john1'`
+  - took ~2.4s for the result everytime
+  - Added index over first_name column since all of the names are different. This would be wrong ideally, but considering the purpose of this activity, I think I can let this be. Anyway, adding an index reduced the response time drastically. Takes 2ms at worst now. This is something I totally didnt expect

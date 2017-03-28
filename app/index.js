@@ -1,4 +1,7 @@
 import Hapi from 'hapi';
+import Debug from 'debug';
+
+const debugServer = Debug('scaleChange:server');
 // import Models from '../models/index';
 // const Models = require('./models/index.js');
 
@@ -20,5 +23,5 @@ server.start((err) => {
   if (err) {
     throw err;
   }
-  console.log('server started on localhist 3000');
+  debugServer('server started on localhost 3000');
 });

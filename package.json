@@ -4,7 +4,7 @@
   "description": "",
   "main": "app/index.js",
   "scripts": {
-    "start": "nodemon ./app/index.js --exec babel-node",
+    "start": "DEBUG=scaleChange:* nodemon ./app/index.js --exec babel-node",
     "build": "babel app -d dist",
     "serve": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/Mnw2212/scaleChange#readme",
   "dependencies": {
     "hapi": "^16.1.0",
+    "debug": "^2.6.3",
     "pg": "^6.1.5",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.30.2"

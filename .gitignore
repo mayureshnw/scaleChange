@@ -38,3 +38,7 @@ jspm_packages
 
 # build files
 dist
+
+# Data files for importing
+*.csv
+

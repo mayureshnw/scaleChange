@@ -32,7 +32,7 @@ I am particularly interested in how javascript handles load and the respective a
 ## Folder structure
 Since the prediction is that folder structure will change considerably overtime, I will be adding it in the readme for every branch
 
-# Targets & Goals
+## Targets & Goals
 - 5000 logins per second
 - 5000 isAuthenticated() requests per second
 - asynchronous logging
@@ -48,6 +48,11 @@ Since the prediction is that folder structure will change considerably overtime,
 - Postgres cluster
 - Multiple servers
 - autoscale
+
+### Tasks
+1. loadbalancer setup
+2. postgres cluster
+3. Bcrypt code for adding users
 
 ## Learnings
 This section is a continuous fragment and all the learnings from past will stay here.

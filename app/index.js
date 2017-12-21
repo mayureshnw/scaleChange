@@ -1,10 +1,16 @@
 import Hapi from 'hapi';
 import Debug from 'debug';
+import {
+	login,
+} from './handlers/login';
+
+import {
+	heartbeat,
+} from './handlers/heartbeat';
 
 const debugServer = Debug('scaleChange:server');
 // import Models from '../models/index';
 // const Models = require('./models/index.js');
-console.log(process.env.PORT);
 const server = new Hapi.Server();
 server.connection({
   port: process.env.PORT || 3000,
@@ -14,11 +20,15 @@ server.connection({
 server.route({
   method: 'GET',
   path: '/',
-  handler: (request, reply) => {
-    debugServer(`request on port ${process.env.PORT || 3000}`);
-    reply('Hello, world!');
-  },
+  handler: heartbeat,
 });
+
+server.route({
+  method: 'GET',
+  path: '/login',
+  handler: login,
+});
+
 
 server.start((err) => {
   if (err) {

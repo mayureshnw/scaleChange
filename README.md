@@ -6,7 +6,13 @@ MAJOR CHANAGE:
 - Skipping to 10000 users. (100/1000 isnt a very difficult feat to achieve)
 - JWT based login. WHY ? - stateless, easier to test ;)
 
-  
+
+#### Temporary usage
+1. `GET /user` => not authorized
+2. `POST /user (pass user and password in form body)` => userobject along with token.
+3. `GET /user + Autoriation Bearer <token>` => list of users  
+
+
 ## The idea
 
 We look at one simple part of a usually complicated web page.

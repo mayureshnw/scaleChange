@@ -1,6 +1,0 @@
-pgloader \
---type csv \
---field "id,first_name,last_name,password,createdAt,updatedAt" \
---with "skip header = 1" \
---with "drop indexes" \
---with "fields terminated by ','" ./test.csv postgres:///loadtest?tablename=users
